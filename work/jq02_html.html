@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            console.log("ready...")
+            
+            let tag = '<h1>jquery</h1>';
+            $("#d01").html(tag);
+
+            let tr = `<tr>
+                        <td>hello</td>
+                    </tr>`;
+            $("#t01").html(tr);
+        });
+    </script>
+</head>
+<body>
+    <div id="d01"></div>
+    <table id="t01">
+
+    </table>
+</body>
+</html>
