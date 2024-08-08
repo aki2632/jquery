@@ -9,7 +9,7 @@
 
     <style>
         #div01 {
-            height: 100px;
+            height: 200px;
             width: 300px;
             padding: 10px;
             margin: 3px;
@@ -22,18 +22,17 @@
         
         $(function(){
             console.log("ready...");
-            let width = $("#div01").width();
-            console.log(width);
-            let height = $("#div01").height();
-            console.log(height);
-
-            console.log($("#div01").innerWidth());//+padding
-            console.log($("#div01").innerHeight());//+padding
-            
+           
             $("#btn").click(function(){
                 console.log("click...");
-                $("#div01").width(200);
-                $("#div01").height(500);
+                //$("#div01").css({"color":"red","border":"2px solid red"});
+                //$("#div01").find("*").css({"color":"red","border":"2px solid red"});
+                //$("#div01").find("p").css({"color":"red","border":"2px solid red"});
+                //$("#div01").find("span").css({"color":"red","border":"2px solid red"});
+                //$("#div01").find("span:first").css({"color":"red","border":"2px solid red"});
+                //$("#div01").find("span:last").css({"color":"red","border":"2px solid red"});
+
+                $("#div01").find("p:first").append("<h1>hello</h1>");
             });
         });
     </script>
@@ -43,7 +42,10 @@
     <div id="div01">
         Hello jquery
         <p>javascript</p>
-        <p>css</p>
+        <p>javascript</p>
+        <span>css</span>
+        <span>css</span>
+        <span>css</span>
     </div>
     <button id="btn">click</button>
 </body>

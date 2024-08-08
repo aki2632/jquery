@@ -9,7 +9,7 @@
 
     <style>
         #div01 {
-            height: 100px;
+            height: 300px;
             width: 300px;
             padding: 10px;
             margin: 3px;
@@ -22,18 +22,15 @@
         
         $(function(){
             console.log("ready...");
-            let width = $("#div01").width();
-            console.log(width);
-            let height = $("#div01").height();
-            console.log(height);
-
-            console.log($("#div01").innerWidth());//+padding
-            console.log($("#div01").innerHeight());//+padding
-            
+           
             $("#btn").click(function(){
                 console.log("click...");
-                $("#div01").width(200);
-                $("#div01").height(500);
+                //1.file 읽기
+                //$("#div01").load("jq15_temp.txt");
+
+                //2.비동기통신
+                $("#div01").load("http://localhost:8090/web10REST_API_war_exploded/text.do");
+
             });
         });
     </script>
@@ -42,9 +39,11 @@
     
     <div id="div01">
         Hello jquery
-        <p>javascript</p>
-        <p>css</p>
+        
     </div>
     <button id="btn">click</button>
+
+
+
 </body>
 </html>

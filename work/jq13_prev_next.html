@@ -9,7 +9,7 @@
 
     <style>
         #div01 {
-            height: 100px;
+            height: 300px;
             width: 300px;
             padding: 10px;
             margin: 3px;
@@ -22,18 +22,17 @@
         
         $(function(){
             console.log("ready...");
-            let width = $("#div01").width();
-            console.log(width);
-            let height = $("#div01").height();
-            console.log(height);
-
-            console.log($("#div01").innerWidth());//+padding
-            console.log($("#div01").innerHeight());//+padding
-            
+           
             $("#btn").click(function(){
                 console.log("click...");
-                $("#div01").width(200);
-                $("#div01").height(500);
+                //$("h3").css("color","red");//대상
+                //$("h3").prev().css("color","red");//바로앞
+                //$("h3").next().css("color","red");//바로다음
+                //$("h3").prevAll().css("color","red");//모든앞
+                //$("h3").nextAll().css("color","red");//모든다음
+
+                //$("h3").siblings().css("color","red");//모든 앞뒤
+                $("h3").nextUntil("h5").css("color","red");//모든 앞뒤
             });
         });
     </script>
@@ -42,8 +41,17 @@
     
     <div id="div01">
         Hello jquery
-        <p>javascript</p>
-        <p>css</p>
+        <p>javascript1</p>
+        <p>javascript2</p>
+        <p>javascript3</p>
+        <h3>h3</h3>
+        <span>css1</span>
+        <span>css2</span>
+        <span>css3</span>
+        <h5>h5</h5>
+        <span>css4</span>
+        <span>css5</span>
+        <span>css6</span>
     </div>
     <button id="btn">click</button>
 </body>
